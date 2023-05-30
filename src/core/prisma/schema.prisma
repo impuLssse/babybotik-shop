@@ -1,0 +1,54 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+}
+
+model Admin {
+  userId Int  @unique
+  chatId Int  @unique
+  role   Role @default(ADMIN)
+
+  @@index([userId, chatId])
+  @@map("admins")
+}
+
+model Product {
+  id          Int      @id @default(autoincrement())
+  name        String   @unique
+  description String
+  pic         String[] @default([])
+  volume      Int      @default(1)
+  categoryId  Int
+  category    Category @relation(fields: [categoryId], references: [id])
+
+  @@map("products")
+}
+
+model Chapter {
+  id         Int        @id @default(autoincrement())
+  name       String     @unique
+  categories Category[]
+}
+
+model Category {
+  id        Int       @id @default(autoincrement())
+  name      String    @unique
+  createdAt DateTime  @default(now())
+  updatetAt DateTime  @updatedAt
+  product   Product[]
+  chapterId Int
+  chapter   Chapter   @relation(fields: [chapterId], references: [id])
+
+  @@map("categories")
+}

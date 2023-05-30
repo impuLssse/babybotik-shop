@@ -1,0 +1,22 @@
+{
+    "scenes": {
+        "start": {
+            "enter": "$t(phrases.start.enter)"
+        },
+        "admin": {
+            "enter": "$t(phrases.admin.enter)"
+        },
+        "products": {
+            "enter": "$t(phrases.products.enter)"
+        },
+        "product_create": {
+            "enter": "$t(phrases.product_create.enter)"
+        },
+        "product_delete": {
+            "enter": "$t(phrases.product_delete.enter)"
+        },
+        "change_language": {
+            "enter": "$t(phrases.change_language.enter)"
+        }
+    }
+}

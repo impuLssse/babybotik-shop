@@ -1,0 +1,26 @@
+{
+    "start": {
+        "enter": "🔥 Sap, {username}. It BabyBotikShop, here you can buy any product for your desire"
+    },
+    "admin": {
+        "enter": "🖥 Admin panel\n👤 {login}\n⚙ {role}"
+    },
+    "products": {
+        "enter": "❤️ Choose what the soul desires:"
+    },
+    "product_create": {
+        "enter": "🛠 Create a product, you can edit or delete it in the future"
+    },
+    "product_delete": {
+        "enter": "❓ Delete a product {product}?"
+    },
+    "product_delete_seriously": {
+        "enter": "❓ Are you sure you want to delete the product {product}?"
+    },
+    "products_not-found": {
+        "enter": "Products not found"
+    },
+    "change_language": {
+        "enter": "📚 Choose your preferred language"
+    }
+}
